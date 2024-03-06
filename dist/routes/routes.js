@@ -10,6 +10,7 @@ const FilterByWordController_1 = require("../controllers/FilterByWordController"
 const CreateCategoryController_1 = require("../controllers/CreateCategoryController");
 const GetAllCategoriesController_1 = require("../controllers/GetAllCategoriesController");
 const FilterPostByCategoryController_1 = require("../controllers/FilterPostByCategoryController");
+const DeletControllerPost_1 = require("../controllers/DeletControllerPost");
 const router = (0, express_1.Router)();
 exports.router = router;
 router.post("/post", CreatePostController_1.CreatePostController);
@@ -18,5 +19,6 @@ router.get("/post/:id", GetPostsByIdController_1.GetPostsByIdController);
 router.patch("/post/:word", FilterByWordController_1.FilterByWordController);
 router.put("/post/:id", UpdatePostController_1.UpdatePostController);
 router.get("/post/category/:categoryId", FilterPostByCategoryController_1.FilterPostByCategoryController);
+router.delete("/post/:id", DeletControllerPost_1.DeletControllerPost);
 router.post("/categories", CreateCategoryController_1.CreateCategoryController);
 router.get("/categories", GetAllCategoriesController_1.GetAllCategoriesController);
