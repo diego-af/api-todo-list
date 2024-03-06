@@ -7,6 +7,7 @@ import { FilterByWordController } from "../controllers/FilterByWordController";
 import { CreateCategoryController } from "../controllers/CreateCategoryController";
 import { GetAllCategoriesController } from "../controllers/GetAllCategoriesController";
 import { FilterPostByCategoryController } from "../controllers/FilterPostByCategoryController";
+import { DeletControllerPost } from "../controllers/DeletControllerPost";
 
 const router = Router();
 
@@ -16,9 +17,12 @@ router.get("/post/:id", GetPostsByIdController)
 router.patch("/post/:word", FilterByWordController)
 router.put("/post/:id", UpdatePostController)
 router.get("/post/category/:categoryId", FilterPostByCategoryController)
+router.delete("/post/:id", DeletControllerPost)
 
 
 router.post("/categories", CreateCategoryController);
 router.get("/categories", GetAllCategoriesController)
+
+
 
 export { router };
